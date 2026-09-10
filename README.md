@@ -1,19 +1,26 @@
 # 桌游封面
 
-独立的手机游戏选择网站，只负责跳转，不包含任何游戏业务、账号或数据库。
+独立的手机游戏选择网站，只负责跳转，不包含游戏业务、账号或数据库。
 
-- 封面：https://merelyfun.github.io/tabletop-hub/
-- 狼人真言：https://merelyfun.github.io/werewords/
-- 血染钟楼：https://merelyfun.github.io/blood-on-the-clocktower/
+- 封面：https://桌游.club/
+- 狼人真言：https://桌游.club/werewords/
+- 血染钟楼：https://桌游.club/blood-on-the-clocktower/
 
-修改 `index.html` 后推送 main，GitHub Actions 自动发布。两个游戏各自在原来的独立仓库维护。
+本仓库是 GitHub 账号主页 MerelyFun.github.io。两个游戏在各自原仓库维护，通过 GitHub Pages 继承账号主页域名。index.html 使用同域根路径链接。推送 main 自动发布。
 
-## 域名转发
+## 当前域名切换状态
 
-桌游.club 目前由 Spaceship 隐藏框架转发到狼人真言。域名所有者登录 Spaceship → Domain list → 桌游.club → URL redirect，将目标替换为本封面地址，选择普通 302 转发并保存。普通转发会显示实际 GitHub Pages 地址。
+2026-09-11：GitHub Pages 已配置 xn--hyvt5k.club（桌游.club 的 ASCII 编码）。域名所有者尚需在 Spaceship 删除 URL redirect，并将 @ 的 A 记录设置为：
 
-如需地址栏始终显示中文域名，应另行绑定自定义域名并修改 DNS。
+- 185.199.108.153
+- 185.199.109.153
+- 185.199.110.153
+- 185.199.111.153
+
+替换原转发 A 记录 15.197.162.184。TTL 默认。DNS 生效、GitHub HTTPS 证书签发后，再启用 Enforce HTTPS。完成前不能宣称域名已可用。
+
+绑定账号域名后，原 github.io 项目网址可能跳转至自定义域名；DNS 切换完成前可能暂时无法使用。
 
 ## 素材
 
-钟楼徽章来自原项目提供的原创素材包，仅用作钟楼入口标识；狼人图案为内联 SVG。
+钟楼徽章来自用户提供的原创素材包；狼人图案为内联 SVG。
