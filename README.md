@@ -23,4 +23,4 @@
 
 ## 素材
 
-首页采用用户提供的双游戏封面 assets/game-covers.png，以 CSS 分别显示上下横幅，保留原图。整幅横幅均可点击，不重复添加图片已有的游戏名称和进入提示。页面背景使用用户指定的纸纹图片 assets/paper-background.png。
+首页采用用户提供的新双游戏封面，裁去中间白色分隔线，分别保存为 assets/werewords-cover.webp（1774×441）和 assets/clocktower-cover.webp（1774×438）。整幅横幅均可点击，不重复添加图片已有的游戏名称和进入提示。页面背景使用用户指定的纸纹图片 assets/paper-background.png。
