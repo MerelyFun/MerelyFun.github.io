@@ -23,4 +23,4 @@
 
 ## 素材
 
-首页采用用户提供的新双游戏封面，裁去中间白色分隔线，分别保存为 assets/werewords-cover.webp（1774×441）和 assets/clocktower-cover.webp（1774×438）。整幅横幅均可点击，不重复添加图片已有的游戏名称和进入提示。页面背景使用用户指定的纸纹图片 assets/paper-background.png。
+首页采用用户提供的两张 4:3 游戏封面，分别为 assets/werewords-cover-4x3.png 和 assets/clocktower-cover-4x3.png（均为 1448×1086），按新图片的 4:3 比例完整显示。整幅横幅均可点击，不重复添加图片已有的游戏名称和进入提示。页面背景使用用户指定的纸纹图片 assets/paper-background.png。
