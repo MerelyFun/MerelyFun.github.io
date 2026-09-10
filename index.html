@@ -3,34 +3,50 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#111318">
+  <meta name="theme-color" content="#f6ecd5">
   <meta name="description" content="桌游.club：选择狼人真言或血染钟楼，开始今晚的桌游。">
   <title>桌游.club · 选一场好游戏</title>
   <style>
-    :root{color-scheme:dark;font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif;background:#111318;color:#f1f3f7}
-    *{box-sizing:border-box}body{margin:0;background:#111318}main{width:min(100%,480px);margin:auto;padding:calc(32px + env(safe-area-inset-top)) 20px calc(28px + env(safe-area-inset-bottom))}header{display:flex;align-items:center;gap:12px;margin-bottom:38px}.brand{display:grid;place-items:center;width:48px;height:48px;background:#292f3a;border:1px solid #485365;border-radius:14px}.brand svg{width:30px;height:30px}header strong{font-size:20px;letter-spacing:.01em}header small{display:block;color:#adb7c6;font-size:12px;margin-top:4px}h1{font-size:30px;line-height:1.4;margin:0 0 12px}p{font-size:15px;color:#adb7c6;line-height:1.8;margin:0}.games{display:grid;gap:18px;margin-top:28px}a{display:block;text-decoration:none;color:inherit;border:1px solid #424b5a;background:#1c212a;border-radius:18px;padding:22px;touch-action:manipulation;-webkit-tap-highlight-color:transparent}a:hover{border-color:#95a9c4;background:#242b36}a:focus-visible{outline:3px solid #afd2fa;outline-offset:4px}.game-top{display:flex;align-items:center;gap:18px;margin-bottom:16px}.game-icon{width:70px;height:70px;border-radius:18px;background:#293344;display:grid;place-items:center;flex-shrink:0}.game-icon svg{width:46px;height:46px;color:#bcd3f4}.game-icon.clock{background:#39252e}.game-icon img{width:60px;height:60px;object-fit:contain}.game-title h2{font-size:25px;margin:0 0 5px}.game-title span{font-size:13px;color:#aeb9c9}.enter{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:50px;border-radius:10px;background:#303c50;padding:12px 16px;margin-top:20px;font-size:16px;font-weight:600}.clocktower .enter{background:#a94356}.enter svg{width:25px;height:25px;flex-shrink:0}footer{text-align:center;color:#929eaf;font-size:13px;line-height:1.8;margin-top:30px}a,p,h1,h2{overflow-wrap:anywhere}@media(max-width:370px){main{padding-left:16px;padding-right:16px}a{padding:20px}.game-top{gap:14px}h1{font-size:28px}.game-title h2{font-size:24px}}
+    :root{color-scheme:light;font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif;background:#f6ecd5;color:#362a23}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100svh;background:#f6ecd5 url("assets/paper-background.png") repeat;background-size:1254px 1254px}
+    main{width:min(100%,1488px);margin:auto;padding:calc(28px + env(safe-area-inset-top)) 24px calc(24px + env(safe-area-inset-bottom))}
+    header{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:24px}
+    header strong{font-size:20px;letter-spacing:.04em}
+    .games{display:grid;gap:18px}
+    .game{display:block;color:inherit;text-decoration:none;border-radius:18px;transition:transform .18s ease,box-shadow .18s ease;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+    .art{display:block;position:relative;aspect-ratio:1942/402;overflow:hidden;border-radius:18px;background:#142139}
+    .art img{position:absolute;display:block;width:100%;height:auto;left:0;top:0}
+    .clocktower .art{aspect-ratio:1942/398;background:#271324}
+    .clocktower img{top:auto;bottom:0}
+    .game:focus-visible{outline:3px solid #744b28;outline-offset:6px}
+    @media(hover:hover){.game:hover{transform:translateY(-2px);box-shadow:0 8px 30px #0006}}
+    footer{text-align:center;color:#6b5948;font-size:13px;line-height:1.8;margin-top:24px}
+    @media(max-width:600px){
+      main{padding:calc(24px + env(safe-area-inset-top)) 12px calc(24px + env(safe-area-inset-bottom))}
+      header{align-items:flex-start;flex-direction:column;gap:8px;padding:0 6px;margin-bottom:22px}
+      .games{gap:22px}.game{overflow:hidden;border-radius:14px}
+      .art,.clocktower .art{border-radius:14px}
+
+    }
+    @media(prefers-reduced-motion:reduce){.game{transition:none}}
   </style>
 </head>
 <body>
   <main>
-    <header><span class="brand" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="24" height="24" rx="6"/><circle cx="11" cy="11" r="1.5" fill="currentColor"/><circle cx="21" cy="11" r="1.5" fill="currentColor"/><circle cx="16" cy="16" r="1.5" fill="currentColor"/><circle cx="11" cy="21" r="1.5" fill="currentColor"/><circle cx="21" cy="21" r="1.5" fill="currentColor"/></svg></span><div><strong>桌游.club</strong><small>朋友到齐，好戏开始。</small></div></header>
-    <h1>今晚，玩哪一局？</h1>
-    <p>选择游戏，进入你的聚会助手。</p>
+    <header><strong>桌游.club</strong></header>
     <nav class="games" aria-label="选择游戏">
-      <a href="/werewords/" target="_top" aria-label="进入狼人真言">
-        <div class="game-top"><span class="game-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8 19 14 29 14 40 8 37 28 29 39 24 43 19 39 11 28Z"/><path d="m8 8 7 17M40 8l-7 17M15 24l6 3m12-3-6 3m-6 7 3 3 3-3M24 37v6"/></svg></span><div class="game-title"><h2>狼人真言</h2><span>猜词 · 隐藏身份 · 聚会</span></div></div>
-        <p>围坐一桌，在问答与猜疑中寻找秘密词语。</p>
-        <span class="enter">进入狼人真言<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span>
+      <a class="game werewords" href="/werewords/" target="_top" aria-label="进入狼人真言">
+        <span class="art"><img src="assets/game-covers.png" width="1942" height="809" alt="狼人真言：是卧底？还是村民？说出真相，或者演到最后！" fetchpriority="high"></span>
+        <span class="mobile-label" aria-hidden="true">狼人真言<span>进入游戏 →</span></span>
       </a>
-      <a class="clocktower" href="/blood-on-the-clocktower/" target="_top" aria-label="进入血染钟楼">
-        <div class="game-top"><span class="game-icon clock" aria-hidden="true"><img src="assets/clocktower-emblem.webp" width="60" height="60" alt=""></span><div class="game-title"><h2>血染钟楼</h2><span>魔典 · 夜间行动 · 说书人</span></div></div>
-        <p>准备城镇、记录线索，让每个秘密留在该在的地方。</p>
-        <span class="enter">进入血染钟楼<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span>
+      <a class="game clocktower" href="/blood-on-the-clocktower/" target="_top" aria-label="进入血染钟楼">
+        <span class="art"><img src="assets/game-covers.png" width="1942" height="809" alt="血染钟楼：谎言、推理、死亡，直到真相浮出水面。"></span>
+        <span class="mobile-label" aria-hidden="true">血染钟楼<span>进入游戏 →</span></span>
       </a>
     </nav>
     <footer>选好游戏，把手机带到桌边。</footer>
   </main>
 </body>
 </html>
-
 
