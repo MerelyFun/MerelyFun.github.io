@@ -23,4 +23,8 @@
 
 ## 素材
 
-首页采用用户提供的两张 4:3 游戏封面，分别为 assets/werewords-cover-4x3.png 和 assets/clocktower-cover-4x3.png（均为 1448×1086），按新图片的 4:3 比例完整显示。整幅横幅均可点击，不重复添加图片已有的游戏名称和进入提示。页面背景使用用户指定的纸纹图片 assets/paper-background.png。
+首页加载手机版 WebP 封面 assets/werewords-mobile.webp 和 assets/clocktower-mobile.webp（均为 800×600，质量 75），保持 4:3 比例。原始 PNG 保留作为源素材，不由页面加载。整幅横幅均可点击，不重复添加图片已有的游戏名称和进入提示。页面背景加载 assets/paper-background-mobile.webp（512×512，质量 60），保持原来的 CSS 纹理显示尺度。三张图片总计 232,024 字节，比原来 8,419,382 字节减少约 97.2%。
+
+## 本机预览
+
+这是无数据库的静态封面站，运行 python -m http.server 4178 --bind 0.0.0.0。电脑访问 http://localhost:4178/；手机连接同一 Wi-Fi 后访问本机当前 WLAN IPv4 地址的 4178 端口。默认仅本地预览，推送 main 会触发发布，须由用户明确要求。
